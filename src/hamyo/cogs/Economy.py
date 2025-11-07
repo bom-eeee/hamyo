@@ -200,6 +200,30 @@ class Economy(commands.Cog):
             fee = await balance_manager.get_fee_for_amount(amount)
         except Exception:
             fee = 1000 if amount >= 50000 else 500
+#             embed = discord.Embed(
+#                 title=f"{unit}、온 송금 실패 ₍ᐢ..ᐢ₎",
+#                 description=f"""
+# ⠀.⠀♡ 묘묘묘... ‧₊˚ ⯎
+# ╭◜ᘏ ⑅ ᘏ◝  ͡  ◜◝  ͡  ◜◝╮
+# (⠀⠀⠀´ㅅ` )
+# (⠀⠀ 엥... 뭔가 이상하다묘..??
+# (⠀⠀⠀⠀ 어디선가 오류가 났다묘..... 
+# ╰◟◞  ͜   ◟◞  ͜  ◟◞  ͜  ◟◞╯
+# """,
+#                 colour=discord.Colour.from_rgb(151, 214, 181)
+#             )
+            
+#             sender_balance = await balance_manager.get_balance(str(ctx.author.id))
+                        
+#             embed.set_footer(
+#                 text=f"요청자: {ctx.author} | 현재 잔액: {sender_balance}", 
+#                 icon_url=ctx.author.display_avatar.url
+#             )
+#             embed.timestamp = ctx.message.created_at
+            
+#             await ctx.reply(embed=embed)
+#             return
+            
         total_cost = amount + fee
 
         # 잔액 확인
