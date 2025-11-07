@@ -329,7 +329,7 @@ class BalanceDataManager:
                 selected_fee = t.get("fee")
             else:
                 break
-        return selected_fee if selected_fee is not None else (1000 if amount >= 50000 else 500)
+        return selected_fee if selected_fee is not None else 0
 
     # 일일 송금/수취 한도 설정
     async def set_daily_limits(self, send_limit: int, receive_limit: int):
